@@ -15,7 +15,7 @@ def home():
     todos = collection.find()
     return render_template('index.html', todos=todos)
 
-@app.route('/submittodoitem', methods=['POST'])
+@app.route('/submittodo', methods=['POST'])
 def submit_todo():
     item_name = request.form['itemName']
     item_description = request.form['itemDescription']
